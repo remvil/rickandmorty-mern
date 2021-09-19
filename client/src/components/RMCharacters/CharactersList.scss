@@ -1,0 +1,30 @@
+.no-charactes-wrapper{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+.charactes-wrapper{
+  .character-list {
+    width: 1248px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+  
+    h1{
+      margin: 2em auto;
+    }
+  }
+  
+}
+
+// Media queries  
+@media only screen and (max-width: 1200px) {
+  .character-list {
+    width: 640px;
+  }
+}

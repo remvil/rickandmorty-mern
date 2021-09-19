@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html {
+  background-color: #D9DBBC;
+  background: url(https://cdnb.artstation.com/p/assets/images/images/031/858/907/large/christian-oliquino-rendered.jpg?1604808013  ) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  height: 100vh;
+  // background: red
+
+  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
