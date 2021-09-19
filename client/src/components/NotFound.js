@@ -5,7 +5,7 @@ import './NotFound.scss'
 class NotFound extends Component {
   render() {
     return (
-      <div className="background-img">
+      <div className="notfound-container">
         <div className="space"></div>
         <div className="notfound-wrapper">
           <div className="img-wrapper">

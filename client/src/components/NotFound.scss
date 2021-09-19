@@ -1,13 +1,21 @@
+.notfound-container {
+  overflow: hidden;
+  scroll-behavior: unset;
+  display: block;
+  height: 100vh;
+  position: relative;
+  margin-top: -7em;
+  z-index: 9;
+}
+
 .notfound-wrapper {
   position: absolute;
-  padding-top: 10em;
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
   right: 0;
   width: fit-content;
-  height: 100vh;
   text-align: center;
   z-index: 4;
   overflow: hidden;
