@@ -39,31 +39,14 @@ build/Release
 
 # Dependency directories
 node_modules/
-jspm_packages/
-
-# TypeScript v1 declaration files
-typings/
+client/node_modules/
+backend/node_modules/
 
 # TypeScript cache
 *.tsbuildinfo
 
 # Optional npm cache directory
 .npm
-
-# Optional eslint cache
-.eslintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
 
 # Yarn Integrity file
 .yarn-integrity
@@ -102,4 +85,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# History plugin
 .history
