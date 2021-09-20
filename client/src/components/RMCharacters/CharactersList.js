@@ -10,12 +10,6 @@ import "./CharactersList.scss";
  * @returns The list of cards with Rick and Morty characters
  */
 export default function CharacterList(props) {
-
-  // TODO controllare che il redirect sia corretto
-  // if(!props.auth.isAuthenticated){
-  //   props.history.push("/login");
-  // }
-
   const [characters, setCharacters] = useState([]);
   let noCharactersText = 'Loading...'
   

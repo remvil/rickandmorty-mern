@@ -8,9 +8,11 @@
 
 
 .charactes-wrapper{
+  padding: 0 0 2em 0;
+
   .character-list {
     width: 1248px;
-    display: block;
+    display: flow-root;
     margin: 0 auto;
     color: white;
     text-align: center;
