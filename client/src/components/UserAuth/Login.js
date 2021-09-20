@@ -44,7 +44,7 @@ class Login extends Component {
    * This method will get called whenever any change happens to props value
    * @param {*} nextProps
    */
-  componentWillReceiveProps(nextProps) {
+   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push("/");
     }

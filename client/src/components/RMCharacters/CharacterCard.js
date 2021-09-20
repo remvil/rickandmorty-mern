@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import classnames from "classnames";
+import { Link, useHistory} from "react-router-dom";
 
+import classnames from "classnames";
 import "./CharacterCard.scss";
 
 export default function CharacterCard(props) {
+  const history = useHistory();
+
+  // Open the Detail Component of selected character
+  function getCharacterDetail(id){
+    history.push('/detail/' + id);
+  }
+
   return (
-    <div className="card">
+    <div className="card" acardid={props.id} onClick={() => getCharacterDetail(props.id)}>
       <img src={props.image} alt={props.name} />
       <div className="card-info">
         <div className="section">
