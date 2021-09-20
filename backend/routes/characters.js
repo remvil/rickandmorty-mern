@@ -30,7 +30,7 @@ router.get("/detail", function (req, res, next) {
       // TODO Define pagination logic
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-      res.send(response.data.results);
+      res.send(response.data);
     })
     .catch((error) => {
       console.log(error);

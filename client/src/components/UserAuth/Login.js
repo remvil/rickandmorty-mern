@@ -34,8 +34,8 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    if(this.props.auth.isAuthenticated) {
-        this.props.history.push('/');
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/");
     }
   }
 
@@ -45,8 +45,8 @@ class Login extends Component {
    * @param {*} nextProps
    */
   componentWillReceiveProps(nextProps) {
-    if(nextProps.auth.isAuthenticated) {
-      this.props.history.push('/')
+    if (nextProps.auth.isAuthenticated) {
+      this.props.history.push("/");
     }
     if (nextProps.errors) {
       this.setState({
@@ -73,9 +73,6 @@ class Login extends Component {
                 onChange={this.handleInputChange}
                 value={this.state.email}
               />
-              {errors.email && (
-                <div className="invalid-feedback">{errors.email}</div>
-              )}
             </div>
             <div className="form-field">
               <input
@@ -88,6 +85,9 @@ class Login extends Component {
                 onChange={this.handleInputChange}
                 value={this.state.password}
               />
+              {errors.email && (
+                <div className="invalid-feedback">{errors.email}</div>
+              )}
               {errors.password && (
                 <div className="invalid-feedback">{errors.password}</div>
               )}
@@ -95,6 +95,10 @@ class Login extends Component {
             <div className="form-field">
               <button type="submit">Login</button>
             </div>
+            <div className="form-field">
+              Don't have an account yet? <a href="/register">Sign in</a>
+            </div>
+            
           </form>
         </div>
       </div>

@@ -12,7 +12,6 @@ class NotFound extends Component {
             <span>44</span>
           </div>
           <p>The page you are trying to search has been <br /> moved to another universe.</p>
-          {/* <button type="button">GET ME HOME</button> */}
           <Link className="get-home" to="/"> GET ME HOME</Link>
         </div>
       </div>

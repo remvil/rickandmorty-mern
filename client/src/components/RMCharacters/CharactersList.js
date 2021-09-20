@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import env from "../../env.json";
 
 import "./CharactersList.scss";
 
@@ -16,7 +17,7 @@ export default function CharacterList(props) {
   // Retrieve the characters list from the API
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/characters/")
+      .get(env.API_SERVER_URL + "characters/")
       .then((result) => {
         setCharacters(result.data);
       })
@@ -40,7 +41,9 @@ export default function CharacterList(props) {
                 status={status}
                 species={species}
                 origin={origin.name}
+                originUrl={origin.url}
                 location={location.name}
+                locationUrl={location.url}
               />
             );
           }
