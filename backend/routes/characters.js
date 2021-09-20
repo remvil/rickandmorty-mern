@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
-const { json } = require("body-parser");
 
 const apiBaseUrl = "https://rickandmortyapi.com/api";
 
@@ -13,6 +12,7 @@ router.get("/", function (req, res, next) {
     .get(apiBaseUrl + '/character')
     .then((response) => {
       // TODO Define pagination logic
+      // TODO Manage list store into db to prevent multiple queries
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       res.send(response.data.results);
@@ -22,12 +22,13 @@ router.get("/", function (req, res, next) {
     });
 });
 
+/**
+ * Get the detail of a single character
+ */
 router.get("/detail", function (req, res, next) {
   axios
     .get(apiBaseUrl + '/character/'+req.query.id)
     .then((response) => {
-      console.log(response.data);
-      // TODO Define pagination logic
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       res.send(response.data);

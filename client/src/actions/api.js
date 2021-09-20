@@ -11,6 +11,6 @@ export const getCharacterList = () => (dispatch) => {
     })
     .catch(err => {
       console.log(err);
-      dispatch
+      dispatch(err);
     })
 }
