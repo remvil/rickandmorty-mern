@@ -21,7 +21,6 @@ class Register extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // TODO ripasso controlled components https://it.reactjs.org/docs/forms.html#controlled-components
   /**
    * Set into State imput value change
    * @param {} e

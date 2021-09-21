@@ -23,6 +23,15 @@ cd ../client
 npm start
 ```
 
-## Extra
+## More details about code
 ### Libraries
-- passport-jwt: Is an authentication middleware for express applications. This module lets authenticate endpoints using a JSON web token. It is intended to be used to secure RESTful endpoints without sessions.
+#### Server side
+- passport-jwt: It is an authentication middleware for express applications. This module allows to authenticate endpoints using a JSON web token. I thought about using it to secure RESTful endpoints.
+
+#### Client side
+- classnames: I've used this package for conditional classNames
+- node-sass: I preferred to use sass instead of css
+- react-icons: A library that contains different types of icons. Probably a little excessive choice but as soon as I just discovered it and I wanted to try it
+
+## Testing
+REST client: I've used rest client plugin on VSCode to test APIs endpoint

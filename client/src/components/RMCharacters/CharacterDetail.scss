@@ -1,33 +1,33 @@
-.detail-container{
+.detail-container {
   height: 90vh;
   align-items: center;
   align-content: center;
   display: flex;
 }
 
-.icon a{
+.icon a {
   text-decoration: none;
-  color: #EF8354;
+  color: #ef8354;
   font-size: 20px;
   position: absolute;
   top: 140px;
   left: 40px;
   font-weight: 100 !important;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   border-radius: 4px;
-  border: 1px solid #EF8354;
+  border: 1px solid #ef8354;
   padding: 6px 20px;
 
-  .button-text{
-    margin-top:2px;
+  .button-text {
+    margin-top: 2px;
   }
 
-  .button-icon{
-    margin-top:10px;
+  .button-icon {
+    margin-top: 10px;
   }
 }
 
-.card-big{
+.card-big {
   width: 300px;
   display: block;
   display: flexbox;
@@ -37,52 +37,51 @@
   box-shadow: 0px 6px 16px -4px #232323;
   animation: rotateIn 0.3s ease-out;
 
-  .card-img-wrapper{
+  .card-img-wrapper {
     border-radius: 0.5em;
     overflow: hidden;
   }
 
-  .card-detail{
+  .card-detail {
     text-align: left;
     color: white;
-    .section{
+    .section {
       margin: 1em;
 
-      h2{
+      h2 {
         font-weight: bolder;
         margin-bottom: 0;
       }
 
-      .section-header{
+      .section-header {
         font-size: 14px;
         color: rgb(158, 158, 158);
         display: block;
       }
 
-      .status-icon{
+      .status-icon {
         height: 0.5em;
         width: 0.5em;
         display: block;
         border-radius: 50%;
         float: left;
         margin: 6px 6px 6px 0;
-        
-        &.alive{
-          background-color: #55CC44;
+
+        &.alive {
+          background-color: #55cc44;
         }
-        &.dead{
-          background: #CC4454;
+        &.dead {
+          background: #cc4454;
         }
-        &.unknown{
-          border: 1px solid #CC4454;
+        &.unknown {
+          border: 1px solid #cc4454;
         }
       }
     }
-    
   }
   button {
     text-align: center;
-    background-color: #EF8354;
+    background-color: #ef8354;
     color: white;
     text-transform: uppercase;
     padding: 15px 32px;

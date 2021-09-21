@@ -44,7 +44,7 @@ class Login extends Component {
    * This method will get called whenever any change happens to props value
    * @param {*} nextProps
    */
-   UNSAFE_componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push("/");
     }
@@ -98,7 +98,6 @@ class Login extends Component {
             <div className="form-field">
               Don't have an account yet? <a href="/register">Sign in</a>
             </div>
-            
           </form>
         </div>
       </div>

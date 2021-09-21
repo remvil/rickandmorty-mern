@@ -85,20 +85,15 @@ router.post("/login", (req, res) => {
           name: user.name,
           avatar: user.avatar,
         };
-        jwt.sign(
-          payload,
-          'secret',
-          { expiresIn: 3600 },
-          (err, token) => {
-            if (err) console.error("There is some error in token", err);
-            else {
-              res.json({
-                success: true,
-                token: `Bearer ${token}`,
-              });
-            }
+        jwt.sign(payload, "secret", { expiresIn: 3600 }, (err, token) => {
+          if (err) console.error("There is some error in token", err);
+          else {
+            res.json({
+              success: true,
+              token: `Bearer ${token}`,
+            });
           }
-        );
+        });
       } else {
         errors.password = "Incorrect Password";
         console.log(errors);

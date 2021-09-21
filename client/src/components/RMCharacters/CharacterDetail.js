@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import classnames from "classnames";
@@ -9,11 +11,16 @@ import env from "../../env.json";
 import "./CharacterDetail.scss";
 
 function CharacterDetail(props) {
+  if (!props.isAuthenticated) {
+    return <Redirect to="/login" />;
+  }
+
   const [details, setDetails] = useState({
     info: "",
     location: "",
     origin: "",
   });
+
   const [fav, getFav] = useState([]);
 
   useEffect(() => {
@@ -33,26 +40,20 @@ function CharacterDetail(props) {
 
     //TODO Fav character to implement
     getFav([2, 3, 6]);
-
-    // if(!props.isAuthenticated){
-    //   const history = useHistory();
-    //   history.push('/login')
-    // }
   }, []);
 
   // Add or remove an element from the fav list
   function toggleFav(id) {
     const index = fav.indexOf(id);
-    (index === -1) ? fav.push(id) : fav.splice(index, 1)
-    console.log(props);
+    index === -1 ? fav.push(id) : fav.splice(index, 1);
   }
 
   return (
     <div className="detail-container">
       <div className="icon">
-        <a href="/">
+        <Link to="/">
           <span className="button-text">&lt; Back to characters</span>
-        </a>
+        </Link>
       </div>
 
       <article className="card-big">

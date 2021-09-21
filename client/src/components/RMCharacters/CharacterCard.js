@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import classnames from "classnames";
 import "./CharacterCard.scss";
@@ -8,18 +8,22 @@ export default function CharacterCard(props) {
   const history = useHistory();
 
   // Open the Detail Component of selected character
-  function getCharacterDetail(id){
-    history.push('/detail/' + id);
+  function getCharacterDetail(id) {
+    history.push("/detail/" + id);
   }
 
   return (
-    <div className="card" acardid={props.id} onClick={() => getCharacterDetail(props.id)}>
+    <div
+      className="card"
+      acardid={props.id}
+      onClick={() => getCharacterDetail(props.id)}
+    >
       <img src={props.image} alt={props.name} />
       <div className="card-info">
         <div className="section">
-          <Link className="detail-btn" to={`detail/${props.id}`}>
+          <span className="detail-btn">
             <h2>{props.name}</h2>
-          </Link>
+          </span>
 
           <div className="status">
             <span

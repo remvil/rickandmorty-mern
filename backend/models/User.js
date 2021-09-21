@@ -22,10 +22,10 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  // favs: {
-  //   type: Array,
-  //   default: []
-  // }
+  favs: {
+    type: Array,
+    default: []
+  }
 });
 
 module.exports = mongoose.model('users', UserSchema);

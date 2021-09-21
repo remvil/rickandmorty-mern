@@ -2,18 +2,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
-import env from "../../env.json";
+import { connect } from "react-redux";
 
 import "./CharactersList.scss";
+import env from "../../env.json";
 
 /**
  * In this section I've used functional component to use the Hooks useState() and useEffect()
  * @returns The list of cards with Rick and Morty characters
  */
-export default function CharacterList(props) {
+function CharacterList(props) {
   const [characters, setCharacters] = useState([]);
-  let noCharactersText = 'Loading...'
-  
+  let noCharactersText = "Loading...";
+
   // Retrieve the characters list from the API
   useEffect(() => {
     axios
@@ -22,14 +23,14 @@ export default function CharacterList(props) {
         setCharacters(result.data);
       })
       .catch((err) => {
-        noCharactersText = 'Sorry, no characters found';
+        noCharactersText = "Sorry, no characters found";
       });
   }, []);
 
   const charactersStructure = (
     <div className="charactes-wrapper">
+      <h1>Hi {props.auth.user.name}, here you are Rick and Morty characters list</h1>
       <section className="character-list">
-        <h1>Rick and Morty characters list</h1>
         {characters.map(
           ({ name, image, status, species, id, origin, location }) => {
             return (
@@ -59,6 +60,12 @@ export default function CharacterList(props) {
       </section>
     </div>
   );
-  
+
   return characters.length > 0 ? charactersStructure : noCharacters;
 }
+
+const mapStateToProps = (state) => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(CharacterList);

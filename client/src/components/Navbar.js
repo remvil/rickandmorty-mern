@@ -8,7 +8,6 @@ import { withRouter } from "react-router";
 import "./Navbar.scss";
 
 class Navbar extends Component {
-
   onLogout(e) {
     e.preventDefault();
     this.props.logoutUser(this.props.history);
@@ -31,28 +30,35 @@ class Navbar extends Component {
           </a>
         </li>
       </ul>
-    )
+    );
 
     const guestLinks = (
       <ul className="nav-links">
         <li className="nav-item">
-          {
-          this.props.location.pathname !== '/login' ?
-          <Link className="nav-link" to="/login"> Sign In</Link> :
-          <Link className="nav-link" to="/register"> Sign Up</Link>
-          }
+          {this.props.location.pathname !== "/login" ? (
+            <Link className="nav-link" to="/login">
+              {" "}
+              Sign In
+            </Link>
+          ) : (
+            <Link className="nav-link" to="/register">
+              {" "}
+              Sign Up
+            </Link>
+          )}
         </li>
       </ul>
-    )
+    );
 
     return (
       <nav className="navbar">
-          <img className="logo"
-            src="https://www.freeiconspng.com/uploads/rick-and-morty-icon-png-26.png"
-            alt="rick and morty app icon"
-          />
+        <img
+          className="logo"
+          src="https://www.freeiconspng.com/uploads/rick-and-morty-icon-png-26.png"
+          alt="rick and morty app icon"
+        />
         <h3>Rick and morty app</h3>
-          {isAuthenticated ? authLinks : guestLinks}
+        {isAuthenticated ? authLinks : guestLinks}
       </nav>
     );
   }
@@ -60,11 +66,11 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object
-}
+  auth: PropTypes.object,
+};
 
 const mapStateToProps = (state) => ({
-  auth: state.auth
-})
+  auth: state.auth,
+});
 
-export default connect(mapStateToProps, {logoutUser})(withRouter(Navbar));
+export default connect(mapStateToProps, { logoutUser })(withRouter(Navbar));

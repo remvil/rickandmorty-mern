@@ -1,12 +1,10 @@
 import axios from 'axios';
-
-const apiBaseUrl = 'https://rickandmortyapi.com/api/';
+import env from '../env.json'
 
 export const getCharacterList = () => (dispatch) => {
   axios
-    .get(apiBaseUrl + 'character' )
+    .get(env.API_SERVER_URL + 'character' )
     .then( response => {
-      console.log(response);
       dispatch(response);
     })
     .catch(err => {

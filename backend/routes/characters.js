@@ -9,12 +9,15 @@ const apiBaseUrl = "https://rickandmortyapi.com/api";
  */
 router.get("/", function (req, res, next) {
   axios
-    .get(apiBaseUrl + '/character')
+    .get(apiBaseUrl + "/character")
     .then((response) => {
       // TODO Define pagination logic
       // TODO Manage list store into db to prevent multiple queries
       res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
       res.send(response.data.results);
     })
     .catch((error) => {
@@ -27,10 +30,13 @@ router.get("/", function (req, res, next) {
  */
 router.get("/detail", function (req, res, next) {
   axios
-    .get(apiBaseUrl + '/character/'+req.query.id)
+    .get(apiBaseUrl + "/character/" + req.query.id)
     .then((response) => {
       res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
       res.send(response.data);
     })
     .catch((error) => {

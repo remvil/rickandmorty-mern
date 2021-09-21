@@ -1,12 +1,12 @@
-.navbar{
+.navbar {
   height: 5em;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-bottom: 1em;
   background-color: #f4f4f4;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
-  
+
   img.logo {
     width: 123px;
   }
@@ -20,19 +20,19 @@
       width: 20px;
       border-radius: 50%;
     }
-    span{
+    span {
       display: block;
       float: right;
     }
 
-    .nav-item .nav-link{
+    .nav-item .nav-link {
       color: #0f7173ff;
-      padding: .5rem;
+      padding: 0.5rem;
       text-decoration: none;
       font-size: 1.2rem;
       font-weight: 700;
 
-      &:hover{
+      &:hover {
         color: #ef8354ff;
       }
     }

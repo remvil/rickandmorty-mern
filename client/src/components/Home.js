@@ -5,6 +5,7 @@ import CharacterList from './RMCharacters/CharactersList';
 class Home extends Component {
   constructor(props){
     super(props)
+    
     if(!props.auth.isAuthenticated){
       this.props.history.push("/login");
     }

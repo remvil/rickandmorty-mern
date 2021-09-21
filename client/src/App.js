@@ -12,6 +12,7 @@ import Login from "./components/UserAuth/Login";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import CharacterDetail from "./components/RMCharacters/CharacterDetail"
+// import AuthRoute from "./AuthRoute";
 
 if (localStorage.jwtToken) {
   // get the Jwt
@@ -34,10 +35,13 @@ class App extends Component {
         <Router>  
             <Navbar />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/detail/:id" component={CharacterDetail} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/detail/:id" component={CharacterDetail} />
+              {/* <AuthRoute exact path="/detail/:id">
+                <CharacterDetail />  
+              </AuthRoute> */}
               <Route component={NotFound} />
             </Switch>
         </Router>

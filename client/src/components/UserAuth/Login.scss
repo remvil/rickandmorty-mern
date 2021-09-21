@@ -22,10 +22,10 @@
       margin-bottom: 1em;
     }
 
-    form{
+    form {
       margin-bottom: 2em;
 
-      .form-field{
+      .form-field {
         input {
           background-color: #f6f6f6;
           border: none;
@@ -47,12 +47,12 @@
           border-radius: 5px 5px 5px 5px;
         }
 
-        .invalid-feedback{
+        .invalid-feedback {
           color: #ca4242;
         }
 
         button {
-          background-color: #EF8354;
+          background-color: #ef8354;
           color: white;
           text-transform: uppercase;
           width: 50%;
@@ -72,18 +72,19 @@
           border-radius: 5px 5px 5px 5px;
           cursor: pointer;
         }
-        
-        input:focus, input:focus-visible{
+
+        input:focus,
+        input:focus-visible {
           background-color: #fff;
           border-bottom: 2px solid #5fbae9 !important;
         }
-        
+
         input:placeholder {
           color: #cccccc;
         }
 
-        a{
-          color: #EF8354; 
+        a {
+          color: #ef8354;
           text-decoration: none;
         }
       }
