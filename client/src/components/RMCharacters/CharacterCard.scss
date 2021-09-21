@@ -1,0 +1,82 @@
+.card {
+  width: 600px;
+  height: 220px;
+  display: flex;
+  float: left;
+  overflow: hidden;
+  background: rgb(60, 62, 68);
+  border-radius: 0.5em;
+  margin: 0.75em;
+  box-shadow: 0px 6px 16px -4px #232323;
+  cursor: pointer;
+  &:hover {
+    .detail-btn {
+      color: #cc4454;
+      text-shadow: 0.5px 0.5px black;
+    }
+  }
+
+  .detail-btn {
+    color: white;
+    text-decoration: none;
+  }
+
+  img {
+    margin-right: 1em;
+  }
+
+  .card-info {
+    text-align: left;
+    color: white;
+    .section {
+      margin: 1em 0;
+
+      h2 {
+        font-weight: bolder;
+        margin-bottom: 0;
+      }
+
+      .section-header {
+        font-size: 14px;
+        color: rgb(158, 158, 158);
+        display: block;
+      }
+
+      .status-icon {
+        height: 0.5em;
+        width: 0.5em;
+        display: block;
+        border-radius: 50%;
+        float: left;
+        margin: 6px 6px 6px 0;
+
+        &.alive {
+          background-color: #55cc44;
+        }
+        &.dead {
+          background: #cc4454;
+        }
+        &.unknown {
+          border: 1px solid #cc4454;
+        }
+        // background: #CC4454;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .card {
+    flex: 0.50 0 51%;
+    width: 400px !important;
+    font-size: 0.8em;
+    
+    &:hover {
+      .detail-btn {
+        color: #cc4454;
+        text-shadow: 0.5px 0.5px black;
+      }
+    }
+  
+  }
+}

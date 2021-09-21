@@ -1,0 +1,40 @@
+.no-charactes-wrapper {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.charactes-wrapper {
+  padding: 0 0 2em 0;
+  // display: flex;
+  // align-items: center;
+  color: white;
+
+  h1 {
+    display: block;
+    text-align: center;
+    margin: 2em auto;
+  }
+
+  .character-list {
+    width: 1248px;
+    // display: flow-root;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+    @media only screen and (max-width: 1200px) {
+      width: 640px;
+    }
+
+    @media only screen and (max-width: 650px) {
+      width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
